@@ -179,6 +179,20 @@ For advanced querying, you can expand this class further with parameter binding,
 
 ---
 
+## Contributing
+
+We welcome contributions! To contribute:
+
+1. Fork this repository
+2. Clone your fork: `git clone https://github.com/your-username/itrro-framework.git`
+3. Create a new branch: `git checkout -b feature-name`
+4. Make your changes and commit: `git commit -m "Your message"`
+5. Push to your fork: `git push origin feature-name`
+6. Open a Pull Request to the `main` branch
+
+Please follow the code structure and comment style of the framework.
+
+---
 ## License
 
 MIT License – You are free to use, modify, and distribute.
@@ -188,4 +202,7 @@ MIT License – You are free to use, modify, and distribute.
 
 ## Author
 
-Aman – Made with passion for learning and fun.
+Aman chuahan – Made with passion for learning and fun.
+
+## links
+ [Aman chauhan Portfolio](https://djaman.github.io/portfolio/))
