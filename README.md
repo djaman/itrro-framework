@@ -98,6 +98,87 @@ $id = $params['id'];
 
 ---
 
+## Database Class Usage Guide
+
+This framework includes a lightweight custom `database` class built using PDO (PHP Data Objects) for safe and easy database interactions.
+
+---
+
+### Initialization
+
+Use the static method `getIntance()` to create a database connection instance:
+
+
+`$db = database::getIntance();`
+
+
+> Note: Database credentials are hardcoded in getIntance(). You can update them as needed.
+
+---
+
+## Methods
+
+1. get($query)
+
+   Used to fetch records from the database.
+   ```
+   $result = $db->get("SELECT * FROM users WHERE status = 1");
+
+   foreach ($result as $row) {
+      echo $row['username'];
+   }
+   ```
+2. insert($query)
+
+   Used to insert new records into the database.
+   ```
+   $success = $db->insert("INSERT INTO users (username, email) VALUES ('john', 'john@example.com')");
+   if ($success) {
+      echo "User added successfully!";
+   }
+   ```
+3. update($query)
+
+   Used to update existing records.
+   ```
+   $success = $db->update("UPDATE users SET status = 1 WHERE id = 5");
+   ```
+4. getCount($query)
+
+    Returns a single count value from the database.
+    ```
+    $total = $db->getCount("SELECT COUNT(*) FROM users WHERE status = 1");
+    echo "Active users: $total";
+    ```
+
+---
+
+## Example Usage in Controller
+```
+require_once "system/database.php";
+
+$db = database::getIntance();
+$users = $db->get("SELECT * FROM users LIMIT 5");
+
+foreach ($users as $user) {
+  echo $user['username'];
+}
+```
+
+---
+
+## Notes
+
+This class uses prepared statements for queries.
+
+You are expected to write raw SQL queries when using these methods.
+
+For advanced querying, you can expand this class further with parameter binding, transactions, etc.
+
+
+
+---
+
 ## License
 
 MIT License – You are free to use, modify, and distribute.
