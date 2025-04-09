@@ -26,7 +26,7 @@ Itrro is a lightweight and fast PHP mini framework designed for small-scale pers
 
 1. Clone the repository or download the ZIP:
    ``` bash
-   git clone https://github.com/yourusername/itrro-framework.git
+   git clone https://github.com/djaman/itrro-framework.git
    ```
 2. Place the contents inside your web root (e.g., `htdocs` or `public_html`).
 
